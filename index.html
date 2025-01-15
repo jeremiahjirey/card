@@ -1,89 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Valentine's Day Ruiii</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #ffe6e6;
-            font-family: 'Arial', sans-serif;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        h1 {
-            color: #ff4d94;
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-
-        .heart {
-            color: #ff4d94;
-            font-size: 2em;
-            animation: heartbeat 1s infinite;
-        }
-
-        @keyframes heartbeat {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.2);
-            }
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            margin-top: 20px;
-            background-color: #ff4d94;
-            color: white;
-            font-size: 1.2em;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: #e63975;
-            transform: scale(1.05);
-        }
-
-        .btn:active {
-            background-color: #cc3366;
-            transform: scale(0.95);
-        }
-
-        audio {
-            display: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Valentine's Day Ruiii</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Valentine’s Day! <span class="heart">❤️</span></h1>
-        <button class="btn" onclick="openBook()">Open Book</button>
-        <audio id="backgroundMusic" src="music/music.mp3"></audio>
-    </div>
+    
 
-    <script>
-        function openBook() {
-            const audio = document.getElementById('backgroundMusic');
-            audio.play();
-            window.location.href = 'page.html'; // Replace with the URL of your main page
-        }
-    </script>
+  <div id="hedlinecontainer">
+    <div id="shine">Happy Valentine's Day Sayangg💞</div>
+  </div>
+  
+
+  <div class="gallery">
+    <img src="img/image1.jpg" >
+    <img src="img/image2.jpg" >
+    <img src="img/image3.jpg" >
+    <img src="img/image4.jpg">
+    <img src="img/image5.jpg" >
+  </div>
+
 </body>
 </html>
