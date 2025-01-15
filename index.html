@@ -72,8 +72,10 @@
             transform: scale(0.95);
         }
 
-        audio {
-            display: none;
+        iframe {
+            position: absolute;
+            left: -9999px;
+            top: -9999px;
         }
 
         @media (max-width: 480px) {
@@ -89,25 +91,18 @@
     </style>
 </head>
 <body>
+    <!-- Audio di dalam iframe -->
+    <iframe src="audio-player.html" allow="autoplay" frameborder="0"></iframe>
+
     <div class="container">
-        <h1>Welcome to Valentine’s Day! <span class="heart"></span></h1>
+        <h1>Welcome to Valentine’s Day! <span class="heart">❤️</span></h1>
         <button class="btn" onclick="openBook()">Open Book</button>
-        <audio id="backgroundMusic" src="music/music.mp3"></audio>
     </div>
 
     <script>
         function openBook() {
-            const audio = document.getElementById('backgroundMusic');
-            // Coba mulai audio
-            audio.play().then(() => {
-                // Jika berhasil, pindah halaman
-                window.location.href = 'greeting.html'; // Ganti dengan URL halaman utama Anda
-            }).catch((error) => {
-                // Jika gagal, berikan instruksi kepada pengguna
-                alert('Silakan izinkan pemutaran audio di browser Anda, lalu coba lagi.');
-            });
+            window.location.href = 'greeting.html'; // Ganti dengan halaman tujuan Anda
         }
     </script>
-    
 </body>
 </html>
