@@ -97,12 +97,21 @@
     <div class="container">
         <h1>Welcome to Valentine’s Day! <span class="heart">❤️</span></h1>
         <button class="btn" onclick="openBook()">Open Book</button>
+        <button id="playAudio" class="btn" onclick="startAudio()">Start Music</button>
+        
+
     </div>
 
     <script>
+        function startAudio() {
+        const iframe = document.querySelector('iframe');
+        iframe.contentWindow.postMessage('play', '*'); // Kirim pesan ke iframe untuk mulai audio
+    }
         function openBook() {
-            window.location.href = 'greeting.html'; // Ganti dengan halaman tujuan Anda
-        }
+            }
+        function openBook() {
+            window.open('greeting.html', '_blank'); // Ganti dengan halaman tujuan Anda
+        } 
     </script>
 </body>
 </html>
