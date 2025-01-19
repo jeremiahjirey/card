@@ -91,24 +91,24 @@
     </style>
 </head>
 <body>
-    <!-- Audio di dalam iframe -->
-    <iframe src="audio-player.html" allow="autoplay" frameborder="0"></iframe>
-
+    
     <div class="container">
         <h1>Welcome to Valentine’s Day! <span class="heart">❤️</span></h1>
         <button class="btn" onclick="openBook()">Open Book</button>
+        <audio id="bgAudio" src="music/music.mp3" loop></audio>
         <button id="playAudio" class="btn" onclick="startAudio()">Start Music</button>
+
         
 
     </div>
 
     <script>
         function startAudio() {
-        const iframe = document.querySelector('iframe');
-        iframe.contentWindow.postMessage('play', '*'); // Kirim pesan ke iframe untuk mulai audio
+        const audio = document.getElementById('bgAudio');
+        audio.play().catch((error) => {
+            console.error('Audio playback failed:', error);
+        });
     }
-        function openBook() {
-            }
         function openBook() {
             window.open('greeting.html', '_blank'); // Ganti dengan halaman tujuan Anda
         } 
